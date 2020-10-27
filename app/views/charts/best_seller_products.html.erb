@@ -1,2 +1,3 @@
-<h1>Charts#best_seller_products</h1>
-<p>Find me in app/views/charts/best_seller_products.html.erb</p>
+<h1>Top 10 Best Selling Products</h1>
+
+<%= column_chart Purchase.group(:product).limit(10).sum(:total_price), label: "Total" %>

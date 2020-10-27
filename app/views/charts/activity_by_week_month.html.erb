@@ -1,0 +1,5 @@
+<h1>Activity by Week</h1>
+<%= line_chart Purchase.group_by_week(:created_at).count %>
+
+<h1>Activity by Month</h1>
+<%= line_chart Purchase.group_by_month(:created_at).count %>
