@@ -1,3 +1,2 @@
 <h1>Top 10 Best Selling Products</h1>
-
 <%= column_chart Purchase.group(:product).limit(10).sum(:total_price), label: "Total" %>
