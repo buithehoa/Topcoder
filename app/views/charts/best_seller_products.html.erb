@@ -1,2 +1,23 @@
-<h1>Top 10 Best Selling Products</h1>
-<%= column_chart Purchase.group(:product).limit(10).sum(:total_price), label: "Total" %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col-xl-6">
+      <h5>Top 10 Best Selling Products</h5>
+      <%= column_chart Purchase.group(:product).limit(10).sum(:total_price), label: "Total" %>
+    </div>
+    <div class="col col-xl-6">
+      <h5>Activity by Week</h5>
+      <%= line_chart Purchase.group_by_week(:created_at).count %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col col-xl-6">
+      <h5>Average Purchases by Vendor</h5>
+      <%= bar_chart Purchase.group(:vendor).average(:total_price), label: "Average" %>
+    </div>
+    <div class="col col-xl-6">
+      <h5>Activity by Month</h5>
+      <%= line_chart Purchase.group_by_month(:created_at).count %>
+    </div>
+  </div>
+</div>

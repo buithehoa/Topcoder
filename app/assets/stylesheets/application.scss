@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+@import 'bootstrap/scss/bootstrap';
+
+nav.navbar {
+  margin-bottom: 1.5em;
+}
+.container-fluid {
+  .row {
+    margin-bottom: 1.5em;
+  }
+}
