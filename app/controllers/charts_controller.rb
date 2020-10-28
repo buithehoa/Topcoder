@@ -1,4 +1,4 @@
 class ChartsController < ApplicationController
-  def best_seller_products
+  def dashboard
   end
 end
