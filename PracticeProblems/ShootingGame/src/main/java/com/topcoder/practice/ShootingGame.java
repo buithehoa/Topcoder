@@ -1,11 +1,5 @@
-/**
- * 
- */
 package com.topcoder.practice;
 
-/**
- * 
- */
 public class ShootingGame {
     public double findProbability(int p) {
         double pAlice = p / Math.pow(10, 6);
