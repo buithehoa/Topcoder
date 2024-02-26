@@ -79,5 +79,4 @@ class RangeEncodingTest {
         int rangeCount = encoder.minRanges(arr);
         assertEquals(4, rangeCount);
     }
-
 }
